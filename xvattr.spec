@@ -10,8 +10,6 @@ BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	gtk+-devel >= 0.99.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 This program is used for getting and setting Xv attributes such as
