@@ -21,16 +21,16 @@ Ten program s³u¿y do odczytu i ustawiania atrybutów Xv, takich jak
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %package gtk
-Summary:	GTK interface for getting and setting Xv attributes
-Summary(pl):	Interfejs GTK do odczytu i ustawiania atrybutów Xv
+Summary:	GTK+ interface for getting and setting Xv attributes
+Summary(pl):	Interfejs GTK+ do odczytu i ustawiania atrybutów Xv
 Group:		X11/Applications
 
 %description gtk
-This is GTK interface for getting and setting Xv attributes such as
+This is GTK+ interface for getting and setting Xv attributes such as
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %description gtk -l pl
-To jest interfejs GTK do odczytu i ustawiania atrybutów Xv, takich jak
+To jest interfejs GTK+ do odczytu i ustawiania atrybutów Xv, takich jak
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %prep
