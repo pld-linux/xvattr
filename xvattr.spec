@@ -1,5 +1,5 @@
 Summary:	Getting and setting Xv attributes
-Summary(pl):	Odczyt i ustawianie atrybut體 Xv
+Summary(pl.UTF-8):   Odczyt i ustawianie atrybut贸w Xv
 Name:		xvattr
 Version:	1.3
 Release:	1
@@ -16,21 +16,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This program is used for getting and setting Xv attributes such as
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
-%description -l pl
-Ten program s硊縴 do odczytu i ustawiania atrybut體 Xv, takich jak
+%description -l pl.UTF-8
+Ten program s艂u偶y do odczytu i ustawiania atrybut贸w Xv, takich jak
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %package gtk
 Summary:	GTK+ interface for getting and setting Xv attributes
-Summary(pl):	Interfejs GTK+ do odczytu i ustawiania atrybut體 Xv
+Summary(pl.UTF-8):   Interfejs GTK+ do odczytu i ustawiania atrybut贸w Xv
 Group:		X11/Applications
 
 %description gtk
 This is GTK+ interface for getting and setting Xv attributes such as
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
-%description gtk -l pl
-To jest interfejs GTK+ do odczytu i ustawiania atrybut體 Xv, takich jak
+%description gtk -l pl.UTF-8
+To jest interfejs GTK+ do odczytu i ustawiania atrybut贸w Xv, takich jak
 XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %prep
