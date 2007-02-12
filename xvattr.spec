@@ -1,5 +1,5 @@
 Summary:	Getting and setting Xv attributes
-Summary(pl.UTF-8):   Odczyt i ustawianie atrybutów Xv
+Summary(pl.UTF-8):	Odczyt i ustawianie atrybutów Xv
 Name:		xvattr
 Version:	1.3
 Release:	1
@@ -22,7 +22,7 @@ XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %package gtk
 Summary:	GTK+ interface for getting and setting Xv attributes
-Summary(pl.UTF-8):   Interfejs GTK+ do odczytu i ustawiania atrybutów Xv
+Summary(pl.UTF-8):	Interfejs GTK+ do odczytu i ustawiania atrybutów Xv
 Group:		X11/Applications
 
 %description gtk
