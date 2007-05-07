@@ -7,11 +7,10 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://www.dtek.chalmers.se/groups/dvd/dist/%{name}-%{version}.tar.gz
 # Source0-md5:	041e0d1f2ebce216e69e08ce78ec2ceb
-BuildRequires:	xorg-lib-libXv-devel
 BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXv-devel
 BuildRequires:	gtk+-devel >= 0.99.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 This program is used for getting and setting Xv attributes such as
@@ -45,7 +44,8 @@ XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
