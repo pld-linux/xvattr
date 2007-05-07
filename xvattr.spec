@@ -7,7 +7,8 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://www.dtek.chalmers.se/groups/dvd/dist/%{name}-%{version}.tar.gz
 # Source0-md5:	041e0d1f2ebce216e69e08ce78ec2ceb
-BuildRequires:	XFree86-devel >= 4.0
+BuildRequires:	xorg-lib-libXv-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	gtk+-devel >= 0.99.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
