@@ -10,6 +10,7 @@ Source0:	http://www.dtek.chalmers.se/groups/dvd/dist/%{name}-%{version}.tar.gz
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXv-devel
 BuildRequires:	gtk+-devel >= 0.99.7
+BuildRequires:	perl-tools-pod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
