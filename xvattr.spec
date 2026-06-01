@@ -1,15 +1,20 @@
+#
+# Conditional build:
+%bcond_with	gtk1	# Build gxvattr binary
+#
 Summary:	Getting and setting Xv attributes
 Summary(pl.UTF-8):	Odczyt i ustawianie atrybutów Xv
 Name:		xvattr
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.dtek.chalmers.se/groups/dvd/dist/%{name}-%{version}.tar.gz
 # Source0-md5:	041e0d1f2ebce216e69e08ce78ec2ceb
+Patch0:		utf8.patch
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXv-devel
-BuildRequires:	gtk+-devel >= 0.99.7
+%{?with_gtk1:BuildRequires:	gtk+-devel >= 0.99.7}
 BuildRequires:	perl-tools-pod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,11 +41,17 @@ XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY...
 
 %prep
 %setup -q
+%patch -P0 -p1
+
+%if %{without gtk1}
+%{__sed} -i -e 's/\(bin_PROGRAMS.*\)gxvattr/\1/' Makefile.in
+%endif
 
 %build
 %configure
 
-%{__make}
+%{__make} \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -57,6 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xvattr
 %{_mandir}/man1/xvattr.1*
 
+%if %{with gtk1}
 %files gtk
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gxvattr
+%endif
